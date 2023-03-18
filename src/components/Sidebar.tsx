@@ -2,6 +2,17 @@ import Link from "next/link";
 import { RxSketchLogo, RxDashboard, RxPerson } from "react-icons/rx";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { FiSettings } from "react-icons/fi";
+import { create } from "zustand";
+import { data } from "../data";
+import { DataState, Item } from "@/type";
+
+export const useStore = create<DataState>((set) => ({
+    data: data,
+    filteredData: [],
+    setFilteredData: (filtered: Item[]) => {
+        set((state) => ({ ...state, filteredData: filtered }));
+    },
+}));
 
 const Sidebar = ({ children }: { children: React.ReactNode }) => {
     return (

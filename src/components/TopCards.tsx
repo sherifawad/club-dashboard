@@ -1,4 +1,3 @@
-import React from "react";
 import { TbSwimming } from "react-icons/tb";
 import { BiSwim } from "react-icons/bi";
 import { FaSwimmer } from "react-icons/fa";
@@ -8,6 +7,8 @@ import { GrSwim } from "react-icons/gr";
 import { SiMicrosoftteams } from "react-icons/si";
 import { MdShutterSpeed } from "react-icons/md";
 import { TbPool } from "react-icons/tb";
+import { useStore } from "./Sidebar";
+import { useEffect } from "react";
 
 interface SportData {
     total: number;
@@ -37,6 +38,11 @@ const TopCards = ({
     old,
     free,
 }: Props) => {
+    const { filteredData } = useStore();
+    useEffect(() => {
+        console.log(filteredData);
+    }, [filteredData]);
+
     return (
         <div className="flex flex-wrap gap-4 p-4">
             <div className="bg-white grid grid-cols-[25px_3fr_2fr] sm:w-fit w-full place-items-center border gap-4 p-4 rounded-lg">
