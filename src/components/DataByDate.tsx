@@ -4,7 +4,7 @@ import { useState } from "react";
 import parseISO from "date-fns/parseISO";
 import isWithinInterval from "date-fns/isWithinInterval";
 import { useStore } from "./Sidebar";
-// import { data } from "../data";
+import { merge } from "@/helpers/dataArray";
 
 const DataByDate = () => {
     const { data, setFilteredData } = useStore();
@@ -26,10 +26,15 @@ const DataByDate = () => {
             })
         );
         setFilteredData(result);
+        console.log(
+            "🚀 ~ file: DataByDate.tsx:30 ~ applyDateFilter ~ result:",
+            result
+        );
+        console.log("merged", merge(result));
     };
 
     return (
-        <div className="flex gap-4 p-4 items-end">
+        <div className="flex flex-wrap items-end gap-4 p-4">
             <div className="flex flex-col items-center">
                 <label>From</label>
                 <input

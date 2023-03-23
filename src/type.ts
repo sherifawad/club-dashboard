@@ -37,5 +37,22 @@ export interface Item {
 export interface DataState {
     data: Item[];
     filteredData: Item[];
+    startDate: Date;
+    endDate: Date;
+    private_type1?: Item;
+    private_type2?: Item;
+    private_type3?: Item;
+    private_type4?: Item;
+    private_type5?: Item;
+    private_type6?: Item;
+    all?: Item;
+    team?: Item;
+    priv?: Item;
+    school?: Item;
+    prep?: Item;
+    special?: Item;
+    practice?: Item;
+    old?: Item;
+    free?: Item;
     setFilteredData: (data: Item[]) => void;
 }
