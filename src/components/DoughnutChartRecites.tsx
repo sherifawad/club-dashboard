@@ -3,7 +3,7 @@
 import { merge } from "@/helpers/dataArray";
 import { sportType } from "@/type";
 import { Doughnut } from "react-chartjs-2";
-import { useStore } from "./Sidebar";
+import { useStore } from "./Header";
 
 import {
     Chart as ChartJS,
@@ -79,6 +79,7 @@ const DoughnutChartRecites = () => {
                     options={{
                         maintainAspectRatio: false,
                         responsive: true,
+                        locale: "ar",
                         plugins: {
                             legend: {
                                 display: true,

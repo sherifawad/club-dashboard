@@ -29,10 +29,9 @@ const values = [100, 800, 200, 300, 50, 10, 3, 5];
 
 export default function Home() {
     return (
-        <div className="p-4 grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4 p-4">
             <DataByDate />
-            {/* <TopCards /> */}
-
+            <TopCards />
             <DoughnutChart />
             <DoughnutChartRecites />
             <MultiSeriesPieChart />

@@ -2,7 +2,7 @@
 
 import { merge } from "@/helpers/dataArray";
 import { sportType } from "@/type";
-import { useStore } from "./Sidebar";
+import { useStore } from "./Header";
 import { PolarArea } from "react-chartjs-2";
 
 import {

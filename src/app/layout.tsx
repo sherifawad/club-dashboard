@@ -15,12 +15,10 @@ export default function RootLayout({
     return (
         <html lang="ar" dir="rtl">
             <body>
-                <Sidebar>
-                    <div className="bg-gray-100 min-h-screen">
-                        <Header />
-                        {children}
-                    </div>
-                </Sidebar>
+                <div className="min-h-screen bg-gray-100">
+                    <Header />
+                    {children}
+                </div>
             </body>
         </html>
     );

@@ -3,7 +3,7 @@
 import { merge } from "@/helpers/dataArray";
 import { sportType } from "@/type";
 import { Bar, Radar } from "react-chartjs-2";
-import { useStore } from "./Sidebar";
+import { useStore } from "./Header";
 
 import {
     Chart as ChartJS,

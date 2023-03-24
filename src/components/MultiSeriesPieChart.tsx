@@ -1,7 +1,7 @@
 "use client";
 
 import { Pie } from "react-chartjs-2";
-import { useStore } from "./Sidebar";
+import { useStore } from "./Header";
 
 import {
     Chart as ChartJS,
